@@ -1,20 +1,18 @@
 import React, { createContext, useReducer } from "react";
 import GlobalReducer from "./GlobalReducer";
 
-/**
- * 1. Vyplnit defaultní state
- */
-const hlavniState = {
+//Defaultní state
+ 
+const mainState = {
   surovina:""
 };
 
-export const GlobalContext = createContext(hlavniState);
+export const GlobalContext = createContext(mainState);
 export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(GlobalReducer, hlavniState);
-  /**
-   * 
-   * 3. Funkce která manipuluje s příslušným statem z bodu 1 
-   */
+  const [state, dispatch] = useReducer(GlobalReducer, mainState);
+  
+  //Funkce manipuluje s prislusnym statem z bodu 1 
+  
  const zmenSurovinu = (surovina) => {
    dispatch({
      type:"ZMENA_SUROVINY",
@@ -24,13 +22,12 @@ export const GlobalProvider = ({ children }) => {
 
   return (
     <GlobalContext.Provider
-    /**
-     * 2. Propíšete tu hodnotu z toho statu
-     */
+    // Propiseme hodnotu ze statu
+    
       value={{
         surovina:state.surovina,
         zmenSurovinu
-      //Seznam vybraných surovin do receptu
+      //Seznam vybranych surovin do receptu
       }}
     >
       {children}

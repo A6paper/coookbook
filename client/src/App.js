@@ -3,6 +3,7 @@ import './App.css';
 import Main from "./pages/Main";
 import AddIngredients from "./pages/AddIngredients";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
+import RecipePage from '../src/pages/RecipePage/recipePage'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Switch>
       <Route exact path="/" component={Main}/>
       <Route exact path="/add-ingredient" component={AddIngredients}/>
+     
      </Switch>
      </BrowserRouter>
     </div>
