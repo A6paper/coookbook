@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const { parseSearchPageVV } = require('../parser/kosik');
+const { parseSearchPageVV } = require('../Parser/kosik');
 
 module.exports = router;
 

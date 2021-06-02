@@ -1,5 +1,5 @@
 const saveIngredient = require("express").Router();
-const modelIngredient = require('../database/models/ingredient');
+const modelIngredient = require('../models/ingredient');
 
 saveIngredient.post("/save-ingredient",(req,res)=>{
     const {name} = req.body;

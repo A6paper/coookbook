@@ -1,5 +1,5 @@
 const getIngredient = require("express").Router();
-const ingredients = require("../database/models/ingredient");
+const ingredients = require("../models/ingredient");
 getIngredient.get("/get-ingredient", (req, res)=>{
     ingredients.find({},(err,docs)=>{
         if (err){

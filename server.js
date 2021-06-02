@@ -6,14 +6,12 @@ const PORT = process.env.PORT || 5000;
 const db = require("./database/connect");
 const getIngredient = require("./routes/getIngredient");
 const saveIngredient = require("./routes/saveIngredient");
+const cors = require("cors");
 db.connect();
 
-//Middleware - enable json from front
-app.use(express.json({extended:false}));
-app.use(express.text({extended:false}));
 
 // routy GET
-app.use("/",getIngredient);
+app.use("/",cors(),getIngredient);
 
 // routy POST
 app.use("/", saveIngredient);
