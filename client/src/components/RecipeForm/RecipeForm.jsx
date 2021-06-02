@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 import { Box, TextInput, Select, Text, Paragraph } from 'grommet';
 import { NumberInput } from 'grommet-controls';
 import { Redirect } from 'react-router-dom';
+import Ingredients from './Ingredients';
+import Search from './Search';
+import Category from './Category';
+import Submit from './Submit';
+import Instruction from './Instruction';
+import Slider from './Slider/Slider';
+import './recipeForm.css';
+import Uploader from '../Uploader/uploader.jsx';
 
 
 const hrs = [
@@ -69,20 +77,20 @@ export default function RecipeForm(props) {
     ) {
       const newErrors = {};
       if (!name) {
-        newErrors.name = 'Пожалуйста, введите название рецепта';
+        newErrors.name = 'Please, fill a name';
       }
       if (!image) {
-        newErrors.image = 'Пожалуйста, добавьте фото рецепта';
+        newErrors.image = 'Please, insert an image';
       }
       if (!category) {
-        newErrors.category = 'Пожалуйста, укажите категорию рецепта';
+        newErrors.category = 'Please, choose a category';
       }
       if (ingredients.length === 0) {
-        newErrors.ingredients = 'Пожалуйста, добавьте ингредиенты';
+        newErrors.ingredients = 'Please, add ingredients';
       }
       if (instructions[0].text === '') {
         newErrors.instructions =
-          'Пожалуйста, заполните инструкции по приготовлению';
+          'Please, fill cooking instructions';
       }
       setError(newErrors);
     } else {
@@ -164,7 +172,7 @@ export default function RecipeForm(props) {
       >
         <TextInput
           plain={true}
-          placeholder="    Название рецепта"
+          placeholder="    Recipe name"
           value={name}
           className="ingredient-name"
           onChange={event => {
@@ -230,11 +238,11 @@ export default function RecipeForm(props) {
           suffix={portionsSuffix}
           onChange={({ target: { value } }) => {
             if (parseFloat(value) === 1) {
-              setSuffix(' порция');
+              setSuffix(' portions');
             } else if (parseFloat(value) > 4) {
-              setSuffix(' порций');
+              setSuffix(' portions');
             } else {
-              setSuffix(' порции');
+              setSuffix(' portions');
             }
             setPortions(value);
           }}
@@ -405,7 +413,7 @@ export default function RecipeForm(props) {
           <Select
             id="hours"
             name="hours"
-            placeholder="часов"
+            placeholder="hodin"
             dropHeight="small"
             options={hrs}
             value={hours}
@@ -423,7 +431,7 @@ export default function RecipeForm(props) {
           <Select
             id="minutes"
             name="minutes"
-            placeholder="минут"
+            placeholder="minut"
             dropHeight="small"
             options={mins}
             value={minutes}
