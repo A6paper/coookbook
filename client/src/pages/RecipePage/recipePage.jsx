@@ -23,7 +23,7 @@ import {
       instructions: [],
       hours: '',
       minutes: '',
-      portionCaption: 'potions'
+      portionCaption: 'portion'
     };
   
     async componentDidMount() {

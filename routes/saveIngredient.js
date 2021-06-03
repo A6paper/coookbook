@@ -13,7 +13,7 @@ saveIngredient.post("/save-ingredient",(req,res)=>{
             })
         }else{
             return res.json( {
-                msg:'Uspesne ulozeni receptu ${JSON.stringify(document)}'
+                msg:'Uspesne ulozeni ingredientu ${JSON.stringify(document)}'
             })
         }
     })

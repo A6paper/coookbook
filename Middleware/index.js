@@ -11,11 +11,7 @@ module.exports = function (app) {
     // Body POST reqs.
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
-    //Enable json from front
-    app.use(express.json({extended:false}));
-    app.use(express.text({extended:false}));
-
-  
+   
     app.use(cookieParser());
   
     app.use(

@@ -15,7 +15,6 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.12",
-    "grommet": "https://github.com/grommet/grommet/tarball/stable",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -23,11 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/A6paper/coookbook.git"
+    "url": "git+https://github.com/A6pap/coookbook.git"
   },
   "bugs": {
-    "url": "https://github.com/A6paper/coookbook/issues"
+    "url": "https://github.com/A6pap/coookbook/issues"
   },
-  "homepage": "https://github.com/A6paper/coookbook#readme",
+  "homepage": "https://github.com/A6pap/coookbook#readme",
   "description": ""
 }

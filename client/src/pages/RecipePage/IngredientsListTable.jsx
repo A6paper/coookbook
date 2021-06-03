@@ -2,6 +2,7 @@ import { Anchor } from 'grommet';
 import React from 'react';
 import './Ingredients.css';
 
+
 export default class IngredientsListTable extends React.Component {
   render() {
     const { ingredients, portions, defaultPortions } = this.props;

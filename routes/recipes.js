@@ -120,7 +120,7 @@ router
       return res.send(JSON.stringify({ message: 'error', error }));
     }
   })
-  // edit exact recipe PUT
+  // edit recipe by id PUT
   .put(async (req, res) => {
     try {
       const {

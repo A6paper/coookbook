@@ -12,7 +12,7 @@ const Main = () => {
     }, [])
     const pridaniIngredientu = async() => {
         setServerMsg("Nacitam data")
-      const data = await fetch("http://localhost:5000/get-ingredient");
+      const data = await fetch("http://localhost:5000/api/get-ingredient");
       const finalData = await data.json();
       const {msg, documents} = finalData;
       setIngredients(documents);

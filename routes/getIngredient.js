@@ -1,5 +1,6 @@
 const getIngredient = require("express").Router();
 const Ingredient = require("../models/ingredient");
+
 getIngredient.get("/get-ingredient", (req, res)=>{
     Ingredient.find({},(err,docs)=>{
         if (err){
