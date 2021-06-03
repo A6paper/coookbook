@@ -1,8 +1,8 @@
 const reducer = (state, action) => {
     switch (action.type) {
-      /**
-       * 4 - zde se  zpracuje finální operace
-       */
+      
+       //zpracovava finalni operace
+       
       case "ZMENA_SUROVINY":
         return{
           ...state,

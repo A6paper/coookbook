@@ -1,6 +1,6 @@
 const request = require('request-promise');
 const parse = require('cheerio');
-const Ingredient = require('../models/ingredient');
+const Ingredient = require('../models/parceIngredients');
 
 
 async function parseSearchPageVV(productName) {

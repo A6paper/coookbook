@@ -26,4 +26,3 @@ app.get("/", (request,response) => {
 app.listen(PORT, (err) => {
     console.log(`Server bezi na ${PORT}!`)
 });
-

@@ -88,6 +88,18 @@ router
     }
   });
 
+  router
+  .route('/cuisine/:cuisine')
+  // get all cuisines GET
+  .get(async (req, res) => {
+    try {
+      const recipes = await Recipe.find({ cuisine: req.params.cuisine });
+      return res.send(JSON.stringify({ message: 'ok', recipes }));
+    } catch (error) {
+      return res.send(JSON.stringify({ message: 'error', error }));
+    }
+  });
+
 router
   .route('/:id')
   // get recipe by id GET

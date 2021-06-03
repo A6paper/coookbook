@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select, Box, Text } from 'grommet';
 
-const cuisines = [
+const cuisine = [
     'Czech cuisine',
     'Italian cuisine',
     'Scandinavian cuisine',
@@ -17,7 +17,7 @@ export default function CuisineSelector({ recipesCuisine, recipesFromApi }) {
       <Select
         value={value}
         placeholder=" Vyberte typ kuchyne"
-        options={cuisines}
+        options={cuisine}
         onChange={({ option }) => {
           setValue(option);
           if (option === 'Libovolna kuchyne') {

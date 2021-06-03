@@ -1,7 +1,7 @@
 const getIngredient = require("express").Router();
-const ingredients = require("../models/ingredient");
+const Ingredient = require("../models/ingredient");
 getIngredient.get("/get-ingredient", (req, res)=>{
-    ingredients.find({},(err,docs)=>{
+    Ingredient.find({},(err,docs)=>{
         if (err){
             return res.json({
                 msg:"Bohuzel se nepodarilo ziskat doc-ty",
